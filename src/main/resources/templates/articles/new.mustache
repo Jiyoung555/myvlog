@@ -1,0 +1,25 @@
+{{>layouts/header}}
+
+<div class = "jumbotron">
+    <h1>Article 등록</h1>
+    <hr>
+    <p>articles/new.mustache</p>
+</div>
+
+<form class="container">
+    <div class="form-group">
+        <label>제목</label>
+        <input class="form-control" id="article-title" placeholder="입력하시오">
+    </div>
+
+    <div class="form-group">
+        <label>내용</label>
+        <textarea class="form-control" id="article-content" rows="3" placeholder="입력하시오"></textarea>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="article-create-btn">제출</button>
+</form>
+
+<Script src="/js/app/article.js"></script>
+
+{{>layouts/footer}}

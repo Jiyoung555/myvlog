@@ -1,0 +1,32 @@
+{{>layouts/header}}
+
+<div class = "jumbotron">
+    <h1>Article 목록</h1>
+    <hr>
+    <p>{{msg}}</p>
+    <p>articles/index.mustache</p>
+</div>
+
+<!-- Article 목록 -->
+<table class="table table-hover">
+    {{#articles}}
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>제목</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>{{id}}</td>
+                <td>
+                    <a href="/articles/{id}"{{title}}></a> <!--클릭시, 상세보기로 이동-->
+                </td>
+            </tr>
+        </tbody>
+    {{/articles}}
+
+</table>
+
+{{>layouts/footer}}

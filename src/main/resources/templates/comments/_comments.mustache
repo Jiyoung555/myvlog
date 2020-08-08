@@ -1,0 +1,17 @@
+<!-- articles/show.mustache에 끼워질 것임 -->
+
+<!-- 댓글 -->
+
+
+<div class="card" id="comments">
+    <div class="card-body">
+        <!-- 댓글 작성창 -->
+        {{>comments/_form}}
+
+        <!-- 댓글 목록 -->
+        {{>comments/_list}}
+    </div>
+</div>
+
+
+<Script src="/js/app/comment.js"></script>

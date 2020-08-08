@@ -1,0 +1,29 @@
+{{>layouts/header}}
+
+<div class = "jumbotron">
+    <h1>Article 수정</h1>
+    <hr>
+    <p>articles/edit.mustache</p>
+</div>
+
+<form class="container">
+    {{#article}}
+    <div class="form-group">
+        <label>제목</label>
+        <input class="form-control" id="article-title" placeholder="입력하시오" value="{{title}}">
+    </div>
+
+    <div class="form-group">
+        <label>내용</label>
+        <textarea class="form-control" id="article-content" rows="3" placeholder="입력하시오">{{content}}</textarea>
+    </div>
+
+    <input type="hidden" id="article-id" value="{{id}}">
+
+    <button type="button" class="btn btn-primary" id="article-update-btn">제출</button>
+    {{/article}}
+</form>
+
+<Script src="/js/app/article.js"></script>
+
+{{>layouts/footer}}
